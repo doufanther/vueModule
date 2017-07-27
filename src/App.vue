@@ -1,21 +1,49 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <hello></hello>
-    <up :src="'/api/imgs'"></up>
+   	<up :src="'/api/imgs'"></up><!--文件上次组件-->
+   	<!--<waterfall :line-gap="200" :watch="items">  vue的瀑布流
+		   each component is wrapped by a waterfall slot 
+		  <waterfall-slot
+		    v-for="(item, index) in items"
+		    :width="item.width"
+		    :height="item.height"
+		    :order="index"
+		    :key="item.id"
+		  >
+		   
+		      your component
+		    
+		  </waterfall-slot>
+		</waterfall>-->
+		<sw></sw>
+		<scrollbar></scrollbar>
+		<zoom></zoom>
+		<pickDate></pickDate>
+		
   </div>
 </template>
 
 <script>
-	import Hello from './components/Hello.vue'
 	import uploader from './components/uploader.vue'
-export default {
-  name: 'app',
-  components:{
-  	'hello':Hello,
-  	'up':uploader
-  }
-}
+//	import waterfall from './components/waterfall.vue'
+	import swiper from './components/swiper.vue'
+	import scrollbar from './components/scrollbar.vue'
+	import zoom from './components/zoom.vue'
+	import pickDate from './components/pickDate.vue'
+//	import amap from './components/amap.vue'
+	export default {
+	  name: 'app',
+	  components:{
+	  	'up':uploader,//文件上传组件
+	//	'waterfall':waterfall
+			'sw':swiper,//lu轮播
+			'scrollbar':scrollbar,
+			'zoom':zoom,
+			'pickDate':pickDate,//日期选择组件
+			//'amap':amap
+	  }
+	}
 </script>
 
 <style>
