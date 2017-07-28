@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+  			
     <img src="./assets/logo.png">
    	<up :src="'/api/imgs'"></up><!--文件上次组件-->
    	<!--<waterfall :line-gap="200" :watch="items">  vue的瀑布流
@@ -20,21 +21,25 @@
 		<scrollbar></scrollbar>
 		<zoom></zoom>
 		<pickDate></pickDate>
-		
+		<shufa></shufa>
+			
+
   </div>
 </template>
 
 <script>
 	import uploader from './components/uploader.vue'
-//	import waterfall from './components/waterfall.vue'
+	//import waterfall from './components/waterfall.vue'
 	import swiper from './components/swiper.vue'
 	import scrollbar from './components/scrollbar.vue'
 	import zoom from './components/zoom.vue'
 	import pickDate from './components/pickDate.vue'
-//	import amap from './components/amap.vue'
+	//import amap from './components/amap.vue'
+	import shufa from './components/shufa.vue'
+	
 	export default {
 	  name: 'app',
-	  components:{
+	 	components:{
 	  	'up':uploader,//文件上传组件
 	//	'waterfall':waterfall
 			'sw':swiper,//lu轮播
@@ -42,6 +47,11 @@
 			'zoom':zoom,
 			'pickDate':pickDate,//日期选择组件
 			//'amap':amap
+			'shufa':shufa
+		},
+	  methods:{
+	  
+			
 	  }
 	}
 </script>
